@@ -1,0 +1,9 @@
+MI BOLSILLO - ENTREGA
+
+1. Abre index.html en Chrome o Edge y pulsa "Probar mi aplicación ahora". Funciona sin cuenta, localmente.
+2. Para usuarios reales, configura Supabase en el formulario de conexión con Project URL y publishable key.
+3. Necesitas publicar index.html y config.js en hosting HTTPS y revisar las políticas RLS de tu proyecto antes de invitar a personas.
+4. Las cuentas nuevas requieren aprobación administrativa y aviso de privacidad.
+5. No incluyas claves secretas en config.js.
+
+IMPORTANTE: esta entrega no está publicada ni vinculada automáticamente a tu proyecto privado.
