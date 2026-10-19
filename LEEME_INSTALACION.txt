@@ -1,0 +1,16 @@
+MI BOLSILLO 3.4 — INSTALABLE EN CELULAR
+
+1. Descomprime este ZIP.
+2. En GitHub, repositorio kvargas-cmyk/mi-bolsillo, sube los CINCO archivos a la raíz de main:
+   index.html, manifest.webmanifest, sw.js, icon-192.png e icon-512.png.
+   Reemplaza index.html; NO borres config.js ni schema.sql.
+3. Guarda/Commit changes y espera el despliegue de GitHub Pages.
+4. Abre https://kvargas-cmyk.github.io/mi-bolsillo/ desde Chrome Android
+   y usa menú ⋮ > Instalar aplicación o Añadir a pantalla de inicio.
+   En iPhone usa Safari > Compartir > Añadir a pantalla de inicio.
+
+IMPORTANTE:
+- La aplicación necesita internet para iniciar sesión y sincronizar con Supabase.
+- Los datos privados no se guardan en la caché del service worker.
+- No ejecutar SQL. No cambiar claves ni tablas.
+- Si ya tenías la app abierta, recarga para actualizar.

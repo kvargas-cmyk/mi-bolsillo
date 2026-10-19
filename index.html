@@ -1,4 +1,11 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mi Bolsillo 3.2 | Registro rápido personalizado</title><style>
+<!doctype html><html lang="es"><head><meta name="theme-color" content="#0b1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mi Bolsillo">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mi Bolsillo 3.2 | Registro rápido personalizado</title><style>
 :root{font-family:Inter,system-ui,Arial;background:#f1f5fb;color:#17243c}*{box-sizing:border-box}body{margin:0}header{background:linear-gradient(115deg,#10254c,#2454da);color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center}header b{font-size:22px}main{max-width:1150px;margin:30px auto;padding:0 18px}.card{background:white;border-radius:18px;padding:22px;box-shadow:0 6px 28px #17243c12;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}.metric{font-size:29px;font-weight:800;margin-top:7px}.muted{color:#64748b;font-size:14px}button{background:#2454da;color:white;border:0;border-radius:10px;padding:11px 16px;cursor:pointer;font-weight:700}button.secondary{background:#e7ecfa;color:#19325c}button.danger{background:#c53b4b}button:disabled{opacity:.5;cursor:wait}input,select{width:100%;padding:11px;border:1px solid #d5ddeb;border-radius:9px;margin:6px 0 12px;font:inherit}label{font-size:13px;font-weight:700}h1,h2,h3{margin:0 0 15px}h1{font-size:28px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.hide{display:none!important}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:11px;border-bottom:1px solid #e8edf5}th{color:#66758a} .scroll{overflow:auto}.tag{border-radius:8px;background:#eaf0ff;padding:5px 9px;font-size:12px}.good{color:#12815e}.bad{color:#c33e52}.notice{background:#fff7df;border:1px solid #efd896;padding:14px;border-radius:10px;margin-bottom:18px}.error{color:#c53b4b}.success{color:#12815e}#msg{min-height:24px;margin:12px 0}.bar{height:12px;background:#e8edf5;border-radius:8px;overflow:hidden}.fill{height:100%;background:#2454da;max-width:100%}nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}nav button{background:#e9edf8;color:#19325c}nav button.active{background:#2454da;color:#fff}small{line-height:1.5}a{color:#2454da} @media(max-width:600px){.card{padding:16px}header{padding:15px}h1{font-size:23px}}
 button:hover{filter:brightness(.96)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #7eafff;outline-offset:2px}.metric{letter-spacing:-.7px}.card h2{font-size:19px}.mini-actions{display:flex;gap:6px;white-space:nowrap}.mini-actions button{padding:7px 10px;font-size:12px}.filterbar{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:12px 0}.filterbar label{flex:1;min-width:170px}.budget-track{height:14px;background:#e8edf5;border-radius:12px;overflow:hidden}.budget-progress{height:100%;background:#2454da}.budget-progress.over{background:#c53b4b}.hint{font-size:12px;color:#64748b;margin-top:5px}@media(max-width:600px){.mini-actions{flex-direction:column}.mini-actions button{padding:6px 8px}th,td{padding:8px 6px}}
 
@@ -182,4 +189,12 @@ async function init(){wireMovementEditor();wireQuickEntry();wireDemo();$('month'
 <label>Fecha<input id="editMovementDate" type="date" required></label>
 <div class="edit-actions"><button type="button" class="secondary" id="editMovementCancel">Cancelar</button><button type="submit" id="editMovementSave">Guardar cambios</button></div>
 <p id="editMovementError" class="error" role="alert"></p></form></dialog>
-<dialog id="categoryDialog" class="edit-dialog"><div class="edit-top"><h2 id="categoryDialogTitle">Gastos de categoría</h2><button type="button" class="secondary" id="categoryDialogClose">✕</button></div><p class="muted">Esta barra es la suma de varios movimientos. Elige cuál quieres editar.</p><div id="categoryDialogList"></div></dialog></body></html>
+<dialog id="categoryDialog" class="edit-dialog"><div class="edit-top"><h2 id="categoryDialogTitle">Gastos de categoría</h2><button type="button" class="secondary" id="categoryDialogClose">✕</button></div><p class="muted">Esta barra es la suma de varios movimientos. Elige cuál quieres editar.</p><div id="categoryDialogList"></div></dialog><script>
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js', {scope:'./'})
+      .catch(err => console.warn('No se pudo habilitar instalación:',err));
+  });
+}
+</script>
+</body></html>
