@@ -1,6 +1,4 @@
-// Copia la URL del proyecto y la clave PÚBLICA (anon/publishable) de Supabase.
-// Nunca pegues aquí service_role, secret keys ni contraseñas.
 window.MI_BOLSILLO_CONFIG = {
-  url: 'https://TU_PROYECTO.supabase.co',
-  anonKey: 'TU_CLAVE_PUBLICA'
+  url: "https://utweiarlzenenjcsraic.supabase.co",
+  anonKey: "sb_publishable_EX0DfBv56_0WJoe6-oTWNQ_aLh4mkL1"
 };
